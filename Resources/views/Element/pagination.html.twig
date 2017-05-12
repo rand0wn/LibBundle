@@ -4,7 +4,7 @@
 
 {% set nbPages = (nbEntities / limit) | round(0, 'ceil') %}
 
-{% set prevNextMaxPages = nbPages / 20 %}
+{% set prevNextMaxPages = (nbPages / 20) | round(0, 'ceil') %}
 {% if prevNextMaxPages < 2 %}
     {% set prevNextMaxPages = 2 %}
 {% endif %}
